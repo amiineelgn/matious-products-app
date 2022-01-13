@@ -1,7 +1,6 @@
 # About The Project
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-
+![Matious capture](https://user-images.githubusercontent.com/64748091/149407028-b4a53738-8939-47fd-a92c-bae56c9ca84b.PNG)
 
 ## Built With
 
@@ -43,7 +42,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 1. Clone the repo
 ```sh
-git clone https://github.com/amiineelgn/matious-product-test-app.git
+git clone https://github.com/amiineelgn/matious-products-app.git
 ```
 2. Install NPM packages
 ```sh
