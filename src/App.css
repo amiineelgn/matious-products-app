@@ -1,0 +1,30 @@
+.App{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FDFDFD;
+    height: 100vh;
+    width: 100%;
+}
+.Container{
+    padding: 50px;
+}
+
+.product{
+    display: flex ;
+    flex-direction: row ;
+    align-items: center ; 
+
+}
+.product img{
+    margin-right: 30px;
+    width:60px; 
+    height:60px ;
+}
+
+.filterBtn{
+    border: none;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
