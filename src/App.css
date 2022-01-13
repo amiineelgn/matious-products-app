@@ -6,9 +6,6 @@
     height: 100vh;
     width: 100%;
 }
-.Container{
-    padding: 50px;
-}
 
 .product{
     display: flex ;

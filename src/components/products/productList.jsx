@@ -24,10 +24,23 @@ import { PaginationTable } from "./tablePagination";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import MenuIcon from "@mui/icons-material/Menu";
 
+const StyledBox  = styled(Box )(({ theme  }) => ({
+  [theme.breakpoints.only("xs")]: {
+    padding:'10px'
+  },
+  [theme.breakpoints.only("sm")]: {
+    padding:'20px'
+  },
+  [theme.breakpoints.up("md")]: {
+    padding:'30px'
+  },
+}));
+
 // Styled table head
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     color: "#042F94",
+    minWidth: "100px",
     [theme.breakpoints.up("xs")]: {
       fontSize: 16,
     },
@@ -36,14 +49,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 
 // Styled Drop Down List
 const DropDownField = styled(TextField)(({ theme }) => ({
-  position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.55),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.75),
   },
-  width: "75%",
-  marginLeft: theme.spacing(8),
+
 }));
 
 export default function ProductList() {
@@ -144,7 +155,7 @@ export default function ProductList() {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box>
         <AppBar position="static">
           <Toolbar>
             <IconButton
@@ -169,7 +180,8 @@ export default function ProductList() {
               id="dropDown"
               options={cat}
               onChange={onChangeCat}
-              sx={{ width: 300 }}
+              sx={{ width: 300}}
+              
               renderInput={(params) => (
                 <DropDownField {...params} variant="filled" label="Category" />
               )}
@@ -178,7 +190,7 @@ export default function ProductList() {
         </AppBar>
       </Box>
 
-      <div className="Container">
+      <StyledBox>
         <TableContainer component={Paper} sx={{ boxShadow: 5 }}>
           <Table sx={{ minWidth: 500 }}>
             <TableHead>
@@ -229,17 +241,17 @@ export default function ProductList() {
                     </div>
                   </TableCell>
 
-                  <TableCell align="center">
+                  <TableCell align="center" sx={{ width: 200 }}>
                     <Typography variant="subtitle2" component="div">
                       {product.category}
                     </Typography>
                   </TableCell>
-                  <TableCell align="center">
+                  <TableCell align="center" sx={{ width: 200 }}>
                     <Typography variant="subtitle2" component="div">
                       {product.price} $
                     </Typography>
                   </TableCell>
-                  <TableCell align="center">
+                  <TableCell align="center" sx={{ width: 200 }}>
                     <Rating
                       size="small"
                       readOnly
@@ -271,7 +283,7 @@ export default function ProductList() {
             </TableFooter>
           </Table>
         </TableContainer>
-      </div>
+      </StyledBox>
     </>
   );
 }
