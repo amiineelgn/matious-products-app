@@ -5,7 +5,7 @@
 ## Built With
 
 * [ReactJs](https://reactjs.org/)^17.0.2
-* [mui/material](https://mui.com/) ^5.2.7
+* [Mui/material](https://mui.com/) ^5.2.7
 
 ## Deployed In
 
